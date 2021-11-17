@@ -7,5 +7,17 @@
 }
 
 #mainHBox{
-    -fx-spacing: 10px;
+    -fx-spacing: 20px;
+}
+
+#informationBox{
+    -fx-spacing: 120px;
+}
+
+#statisticBox{
+    -fx-spacing: 120px;
+}
+
+LineChart.chart-series-line{
+    -fx-stroke: #e9967a;
 }

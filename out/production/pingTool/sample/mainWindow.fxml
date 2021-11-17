@@ -17,6 +17,7 @@
         <TextField fx:id="hostnameTextFiled"/>
         <Button fx:id="confirmButton" onAction="#pingTest">确认</Button>
         <Button fx:id="cancelButton" onAction="#stop">停止</Button>
+        <Button fx:id="pauseButton" onAction="#pause">暂停</Button>
     </HBox>
     <LineChart fx:id="lineChart">
         <xAxis>
@@ -26,5 +27,14 @@
             <NumberAxis label="latency(ms)" fx:id="yAxis"/>
         </yAxis>
     </LineChart>
+    <HBox id="informationBox">
+        <Label fx:id="timeLabel">测试时间：</Label>
+        <Label fx:id="latencyLabel">ping延迟：</Label>
+    </HBox>
+    <HBox id="statisticBox">
+        <Label fx:id="countLabel">总测试数：</Label>
+        <Label fx:id="averageLabel">平均延迟：</Label>
+        <Label fx:id="worstCountLabel">延迟显著高于平均时延的次数：</Label>
+    </HBox>
 </VBox>
 

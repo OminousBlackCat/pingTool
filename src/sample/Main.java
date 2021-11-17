@@ -10,8 +10,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("mainWindow.fxml"));
-        primaryStage.setTitle("Hello World");
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("mainWindow.fxml"));
+        Parent root = fxmlLoader.load();
+        Controller controller = fxmlLoader.getController();
+        controller.init();
+        primaryStage.setTitle("PingTool");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
