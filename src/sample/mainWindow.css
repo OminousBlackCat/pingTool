@@ -1,0 +1,11 @@
+#frameVBox{
+    -fx-spacing: 10px;
+    -fx-padding: 10px;
+    -fx-min-width: 800px;
+    -fx-min-height: 450px;
+    -fx-font-size: 15px;
+}
+
+#mainHBox{
+    -fx-spacing: 10px;
+}

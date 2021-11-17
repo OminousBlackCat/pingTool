@@ -1,0 +1,30 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<VBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml" id="frameVBox" stylesheets="@mainWindow.css">
+    <Label>Ping测试小工具</Label>
+    <HBox id="mainHBox">
+        <Label>主机名/IP地址：</Label>
+        <TextField fx:id="hostnameTextFiled"/>
+        <Button fx:id="confirmButton" onAction="#pingTest">确认</Button>
+        <Button fx:id="cancelButton" onAction="#stop">停止</Button>
+    </HBox>
+    <LineChart fx:id="lineChart">
+        <xAxis>
+            <NumberAxis label="Time(times)" fx:id="xAxis"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="latency(ms)" fx:id="yAxis"/>
+        </yAxis>
+    </LineChart>
+</VBox>
+
